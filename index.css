@@ -183,6 +183,11 @@ nav div h1:hover::after{
     /* flex-wrap: wrap; */
 }
 
+.main .hero{
+    background: red;
+    width: 50%;
+}
+
 .main .actor{
     width: 50%;
     /* background: blue; */
