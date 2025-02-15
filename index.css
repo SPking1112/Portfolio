@@ -1,0 +1,673 @@
+/* Imported Font  */
+
+/* Universal Selector */
+*{
+    margin:0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+/* World Element  */
+:root{
+    --bg-primary:rgb(4, 29, 37);
+    --bg-secondary:white;
+    --txt-1:aqua;
+    --txt-2:lightgray;
+    --free-use:black;
+}
+
+/* Overall Web  */
+.web{
+    min-height: 100vh;
+    background: var(--bg-primary);
+    padding: 10px;
+}
+
+/* Home */
+.home{
+    height: 100vh;
+    padding: 10px;
+}
+
+/* Navigation Bar  */
+.home header{
+    height: 10vh;
+    /* background: var(--txt-2); */
+}
+
+nav{
+    left: 50px;
+    position: fixed;
+    padding: 10px;
+    border-radius: 20px;
+    width: 100%;
+    height: 10%;
+    padding: 20px;
+    /* background-color: black; */
+    color:var(--txt-1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transform: translatex(-50px);
+
+}
+
+nav div{
+    display: flex;
+    gap: 20px;
+    justify-content: space-evenly;
+}
+
+.web nav div h1{
+    cursor: pointer;
+    position: relative;
+    transition: all 1s;
+    font-size: 20px;
+    padding: 5px;
+    
+}
+
+.web nav div h1 i{
+    cursor: pointer;
+    position: relative;
+    transition: all 1s;
+    font-size: 20px;
+    padding: 5px;
+    
+}
+
+.web nav div h1 a{
+    text-decoration: none;
+}
+
+/* Hover  */
+.web nav div h1 a:hover{
+    color:var(--txt-2);
+}
+
+.web nav div h1 a i:hover{
+    color: var(--txt-2);
+}
+
+nav div h1::before{
+    position: absolute;
+    content: "";
+    width: 0%;
+    height: 3px;
+    /* background-color: var(--txt-2); */
+    bottom: 0px;
+    left: 0px;
+    transition: all 2s;
+    z-index: -1;
+}
+
+nav div h1:hover::before{
+    width: 100%;
+    height: 50%;
+    /* top: 0px; */
+}
+
+nav div h1::after{
+    position: absolute;
+    content: "";
+    width: 0%;
+    height: 3px;
+    /* background-color: var(--txt-2); */
+    top: 0px;
+    right: 0px;
+    transition: all 2s;
+    z-index: -1;
+}
+
+nav div h1:hover::after{
+    width: 100%;
+    height: 50%;
+
+    /* bottom: 0px; */
+}
+
+/* Content */
+.content{
+    position: relative;
+    top: 100px;
+    width: 100%;
+}
+
+.web label,input{
+    display: none;
+}
+
+/* Responsive */
+
+@media only screen and (max-width:800px) {
+    .web nav div
+    {
+        background-color: var(--bc);
+        position: absolute;
+        top: 68px;
+        right: -100px;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+        width: 30%;
+        min-height: 50%;
+        display: none;
+        text-align: center;
+        z-index: 0; 
+    }
+
+    input:checked~div
+    {
+        /* opacity: 1; */
+        display: initial;
+        right: 10px;
+        
+    }
+    
+    .web label
+    {
+        display: initial;
+        font-size: 20px;
+    }
+}
+/* Navigation Bar closes */
+
+/* Main  */
+.home .main{
+    height: 80vh;
+    /* background: red; */
+    display: flex;
+    /* flex-wrap: wrap; */
+}
+
+.main .actor{
+    width: 50%;
+    /* background: blue; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    padding: 20px;
+}
+
+.main .actor>h1{
+    font-size: 50px;
+    color: var(--txt-1);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.main .actor>h2{
+    font-size: 40px;
+    color: var(--txt-2);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.main .actor>p{
+    color: var(--txt-1);
+    /* align-self: start; */
+    font-size:15px;
+    width: 90%;
+    line-height: 2;
+}
+
+/* Responsive */
+/* <800px */
+@media only screen and (max-width:850px) {
+
+    .main .actor{
+        width: 100%;
+    }
+    .main .actor>h1{
+        font-size:60px;
+    }
+
+    .main .actor>h2{
+        font-size: 40px;
+    }
+
+    .main .actor>p{
+        font-size: 15px;
+    }
+
+}
+
+/* <500px */
+@media only screen and (max-width:750px) {
+
+    .main .actor{
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .main .actor>h1{
+        font-size:50px;
+    }
+
+    .main .actor>h2{
+        font-size: 30px;
+    }
+
+    .main .actor>p{
+        font-size: 15px;
+    }
+
+    .main .container {
+        gap: 10px;
+        height:5vh;
+    }
+
+    .container button{
+        padding: 5px;
+        font-size: 15px;
+    }
+}
+
+
+
+.main .actor .container{
+    min-height: 6vh;
+    width: 70%;
+    /* background: red; */
+    display: flex;
+    justify-content: space-evenly;
+    align-content: start;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.home .container a{
+    text-decoration: none;
+    padding: 5px;
+    color: var(--free-use);
+}
+
+.home .container .bt1{
+    background: var(--txt-1);
+}
+
+.home .container .bt,a{
+    color: var(--txt-1);
+}
+
+.bt span{
+    padding: 5px;
+}
+
+.home .container button{
+    border: none;
+    padding: 10px;
+    border-radius:40px ;
+}
+
+
+
+/* Responsive */
+@media screen and (max-width:400px) {
+    .home .container button{
+        width: 100%;
+        padding: 10px;
+    }
+}
+
+/* Home closes */
+
+/* Project  */
+
+.project{
+    height: 90vh;
+    padding: 80px 20px 20px 40px;
+    /* background: red; */
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.project h1{
+    font-size: 40px;
+    font-weight: 900;
+    font-family: 'Times New Roman', Times, serif;
+    color: var(--txt-1);
+}
+
+.project h1 span{
+    color: var(--txt-2);
+    font-family: 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.project .clicks{
+    height: 10vh;
+    /* display: flex; */
+    gap: 20px;
+    /* background: gray; */
+}
+
+.project .clicks button{
+    padding: 10px;
+    margin-right:10px;
+    /* border-radius: 20px; */
+    border: none;
+    /* border: 1px solid var(); */
+    background: var(--txt-1);
+    box-shadow: 2px 2px 10px var(--free-use);
+    transition: 2s all;
+    font-weight: 900;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.project .clicks button:hover{
+    transform: scale(1.2);
+    box-shadow: 5px 5px 10px var(--free-use);
+}
+
+/* Responsive */
+
+/* <450px */
+
+@media only screen and (max-width:450px) {
+    .project .clicks button{
+        /* padding: 5px; */
+        margin: 10px;
+    }
+}
+
+/* Project closes */
+
+/* Skills */
+.skill{
+    min-height: 100vh;
+    /* background: red; */
+    display: flex;
+    flex-wrap: wrap;
+    padding: 40px 30px;
+    justify-content: space-evenly;
+    gap: 30px;
+}
+
+.skill header{
+    height: 10vh;
+    /* background: red; */
+    width: 100%;
+}
+
+.skill header h1{
+    color: var(--txt-1);
+    font-size: 50px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.skill .box{
+    width: 350px;
+    height: 250px;
+    border: 3px solid var(--txt-1);
+    padding: 15px;
+    /* transform: skew(-10deg); */
+}
+
+.skill .box h2{
+    color: var(--txt-1);
+    font-size: 30px;
+    font-family: 'Arial Narrow', Arial, sans-serif;
+    padding: 2px;
+    border-bottom: 2px solid var(--txt-1);
+    text-shadow: 2px 2px var(--free-use);
+}
+
+.skill .box h2 span{
+    color: var(--txt-2);
+}
+
+.skill .box p{
+    color: var(--txt-1);
+    font-size: 20px;
+    font-weight: 500;
+    padding: 5px 0px;
+}
+
+.skill .box span i{
+    color: var(--txt-1);
+    font-size: 20px;    
+}
+
+.skill .box span .i-5{
+    color: var(--txt-2);
+}
+
+/* Responsive  */
+/* <400px */
+@media only screen and (max-width:400px) {
+
+    .skill .box{
+        transform: skew(0deg);
+        border: 2px solid var(--txt-1);
+    }
+
+    .skill .box h2{
+        font-size: 30px;
+    }
+
+    .skill .box p{
+        font-size: 15px;
+    }
+
+
+}
+
+/* Skills closes */
+
+/* Hire  */
+.hire{
+    height: 80vh;
+    /* background: red; */
+    display: flex;
+    padding: 20px;
+}
+
+.hire .container{
+    width: 40%;
+    /* background: black; */
+}
+
+/* .hire .container h1{
+    font-size: 50px;
+    font-weight: 900px;
+    
+    color: var(--txt-2);
+} */
+
+.hire .container h2{
+    font-size: 60px;
+    font-weight: 500;
+    color: var(--bg-secondary);
+    font-family: fantasy;
+    text-shadow: 2px 1px var(--txt-1);
+}
+
+.hire .container h2~h1{
+    font-size: 60px;
+    font-weight: 800;
+    color: var(--txt-1) ;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-shadow: 1px 1px var(--txt-2);
+}
+
+/* Animation */
+.hire .container h1{
+    animation-name: txt-1;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes txt-1 {
+    0%{
+        color: var(--txt-2);
+        text-shadow: 0px 1px var(--txt-2);
+
+    }
+
+    50%{
+        color: var(--txt-2);
+        text-shadow: 10px 10px var(--bg-secondary);
+    }
+
+    100%{
+        color: var(--txt-1);
+        text-shadow: 1px 1px var(--free-use);
+    }
+}
+
+.hire form{
+    width: 50%;
+    /* background:  gray; */
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 20px;
+}
+
+.hire form .name{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+
+.hire label{
+    font-size: 30px;
+    color: var(--bg-secondary);
+    font-size: 800;
+    font-family: serif;
+    display: block;
+}
+
+.hire form .name input{
+    width: 100%;
+    padding: 10px;
+    display:flex;
+    outline: none;
+}
+
+.hire form textarea{
+    height: 60%;
+    padding: 10px;
+}
+
+.hire form button{
+    width: 20%;
+    border: none;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: 700;
+    background: var(--txt-1);
+    border-radius: 30px;
+    transition: 2s all;
+}
+
+.hire form button:hover{
+    box-shadow: 1px 3px 10px var(--bg-secondary);
+    transform: scale(1.1);
+}
+
+
+/* Responsive  */
+
+/* <900px */
+
+@media only screen and (max-width:950px) {
+    .hire {
+        flex-direction: column;
+        gap: 20px;
+        height: 100vh;
+    }
+
+    .hire .container{
+        height: 50%;
+        width: 100%;
+    }
+
+    .hire form{
+        width: 100%;
+        min-height: 60%;
+    }
+
+    .hire form .name{
+        gap: 30px;
+    }
+
+    .hire form button{
+        width: 30%;
+    }
+}
+
+/* <500% */
+@media only screen and (max-width:550px) {
+
+    .hire {
+        height: 100vh;
+        }
+
+    .hire form {
+        height: 100%;
+        /* background: red; */
+        padding: 10px;
+    }
+
+    .hire form .name{
+        gap: 10px;
+    }
+
+    .hire form label{
+        font-size: 20px;
+    }
+
+    .hire form textarea{
+        height: 50%;
+        /* padding: 60px; */
+    }
+
+    .hire form button{
+        /* padding: 30px; */
+        width: 40%;
+    }
+}
+
+/* Hire closes */
+
+/* Contact */
+#contact{
+    height: 30vh;
+    /* background: red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.d-box h1{
+    /* background: var(--bg-secondary); */
+    padding: 20px;
+    border-radius: 50%;
+    font-size: 40px;
+    color: var(--txt-1);
+}
+
+.d-box i{
+    transition: 2s all;
+}
+
+.d-box h1:hover i {
+    transform: scale(1.1);
+    color: var(--bg-primary);
+}
+
+.d-box h1:hover{
+    background: var(--txt-1);
+}
+
+
+/* Contact closes */
